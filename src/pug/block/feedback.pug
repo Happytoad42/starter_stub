@@ -1,0 +1,16 @@
+block feedback
+    .main__modal.modal__feedback#feedbackModal
+        .modal__wrapper
+            form.feedback(action='mailto:consulting@gmc-consulting.ru')            
+                h2.modal__title Хотите с нами связаться??
+                input.feedback__name(type='text' s='' placeholder='Ваше имя' name='name' required)
+                input.feedback__email(type='email' placeholder='Ваш Email' name='email' required)
+                textarea.feedback__text(placeholder='Ваше сообщение' name='descr' rows='4' required)
+                textarea.feedback__text(placeholder='Ваше сообщение' name='descr' rows='4' required)
+                textarea.feedback__text(placeholder='Ваше сообщение' name='descr' rows='4' required)
+                textarea.feedback__text(placeholder='Ваше сообщение' name='descr' rows='4' required)
+                button.form__submit(type='submit') Отправить заявку
+                .modal__text.modal__text--disclaimer
+                    p Текст правового дисклеймера. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolorum eaque libero nam, id incidunt delectus molestiae aut quisquam maxime.
+                button(type='button').modal__close
+                    span.fas.fa-times

@@ -1,0 +1,672 @@
+.header
+	position: relative
+	height: 100px
+	width: 100vw
+	font-size: 16px
+	z-index: 2
+	background-color: $main-color-dark
+	@media(max-width: $screen-sm)
+		min-height: 75px
+		height: 75px
+
+.menu__wrapper
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	width: 100%
+	height: 100%
+	background-color: $main-color-dark
+	@media(max-width: $screen-sm)
+		z-index: 1
+		position: absolute
+		top: 0
+		right: 0
+		width: 100%
+		height: 100%
+		flex-flow: column
+		justify-content: center
+		align-items: center
+		height: 100%
+		z-index: 600
+		&:before
+			position: absolute
+			content: ''
+			z-index: 1
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: inherit
+
+
+.menu__mobile
+	width: 85%
+	padding: 0 0 0 30px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	@media(max-width: $screen-lg)
+		padding: 0 35px 0 15px
+		width: 90%
+	@media(max-width: $screen-sm)
+		position: absolute
+		padding: 0
+		width: 100%
+		top: 75px
+		left: 0
+		padding: 0
+		flex-flow: column-reverse
+		transform: translateY(-100%)
+		transition: all 0.8s
+		height: auto
+		background: $main-color
+		&--opened
+			transform: translateY(0%)
+	
+
+.menu__logo 
+	position: relative
+	width: 15%
+	height: 100%
+	padding-left: 50px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	text-decoration: none
+	img
+		transform: translateY(-5px)
+
+	&:before
+		transform: translateY(25%)
+		opacity: 0
+		position: absolute
+		content: 'На главную'
+		padding: 5px 10px
+		color: #fff
+		right: -10%
+		bottom: -15%
+		width: 100px
+		height: 25px
+		border: 1px solid #fff
+		background-color: $main-color
+		transition: all .7s .2s
+
+
+	&:hover
+		.logo__text
+			color: $second-color
+		&:before
+			transform: translateY(0)
+			opacity: 1
+	@media(max-width: $screen-lg)
+		width: 10%
+		padding-left: 35px
+	@media(max-width: $screen-sm)
+		z-index: 5
+		height: auto
+		width: auto 
+		position: absolute
+		padding-left: 0
+		top: 55%
+		transform: translate(0, -50%)
+		left: 25px
+
+.logo__img
+	width: 42px
+	height: 52px
+	@media(max-width: 768px)
+		width: 36px
+		height: 43px
+
+.logo__text
+	font-size: 14px
+	color: #fff
+	margin: auto 0 auto 20px
+	padding: 0 10px
+	border-left: 1px solid $border-color
+	text-decoration: none
+
+	@media(min-width: $screen-lg+1) and (max-width: 1760px)
+		font-size: 12px
+	@media(max-width: $screen-lg)
+		display: none
+
+.menu__user
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 30%
+	@media(min-width: $screen-xl)
+		margin-right: 25px
+	@media(max-width: $screen-sm)
+		min-height: 50px
+		width: 100%
+		padding: 0 10px
+
+.user 
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	list-style: none
+	height: 100%
+	width: 100%
+	padding: 0
+	@media(max-width: $screen-sm)
+		width: 100%
+		min-width: 320px
+
+.user__item
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	min-width: 25%
+	height: 100%
+
+	@media(max-width: $screen-sm)
+		height: 30px
+
+	@media(min-width: $screen-sm + 1) and (max-width: 1380px)
+		min-width: 40%
+	@media(min-width: 1381px)
+		min-width: 25%
+
+.user__item:not(:nth-of-type(1))
+	&:hover
+		background-color: #21252c
+		box-shadow: 40px 1px 0  #21252c, -40px 1px 0  #21252c
+		transition-duration: 0.3s
+		@media(max-width: $screen-sm)
+			background-color: inherit
+			box-shadow: none
+
+.user__link
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	min-height: 20px
+	font-size: 16px
+	border-right: 1px solid #4b4e53
+	z-index: 1
+	svg
+		font-size: 17px
+		color: $text-color-light
+
+.user__item--phone
+	flex-grow: 1
+	a
+		color: $text-color-light
+		text-decoration: none
+		cursor: default
+		svg
+			margin-left: 20px
+
+	@media(max-width: 1380px)
+		display: none
+
+.user__item--mail
+	cursor: pointer
+	a
+		@media(max-width: $screen-sm)
+			pointer-events: none
+			cursor: default
+
+	span,
+	svg
+		@media(max-width: $screen-sm)
+			font-size: 14px
+			opacity: 0
+
+	@media(max-width: $screen-sm)
+		display: none
+
+.user__item--lang 
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	@media(max-width: $screen-sm)
+		margin-left: 70%
+		width: 15%
+		border-left: 1px solid $border-color
+
+.user__item--text 
+	display: none
+	margin-right: 25px
+	@media(max-width: $screen-sm)
+		display: block
+		color: $text-color-light
+		font-size: 18px
+
+.user__lang
+	min-width: 65px
+	color: $text-color-light
+	background-color: transparent
+	border: none
+	outline: none
+	cursor: pointer
+	option
+		background-color: $main-color-dark
+
+.menu__nav
+	min-width: 40%
+	@media(max-width: $screen-sm)
+		width: 100%
+
+// Open nav lvl 2
+
+.nav__dropdown:hover > .nav__submenu
+	transform: translateY(0%)
+
+@media(max-width: $screen-sm)
+	.nav__dropdown--open > .nav__submenu
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		max-height: 100%		
+		.nav__dropdown > .nav__link
+			color: $link-active
+			border-bottom: 1px dashed #fff
+
+
+	
+.nav__submenu
+	position: absolute
+	padding: 20px 50px
+	left: 0
+	top: 100px
+	transform: translateY(-130%)
+	opacity: 1
+	z-index: -1
+	transition-duration: .6s
+	display: flex
+	flex-flow: column
+	justify-content: flex-start
+	flex-wrap: wrap
+	margin: 0
+	width: 100%
+	list-style: none
+	background-color: $bg-color
+	@media(max-width: $screen-sm)
+		display: none 
+		position: relative
+		padding: 0
+		top: 0
+		transform: none
+		background-color: $bg-color
+		z-index: inherit
+		transition-duration: .2s
+		padding-bottom: 25px
+
+.submenu__title
+	display: inline
+	padding: 15px 0
+	color: $text-color-light
+	word-wrap: break-word
+	font-size: 20px
+	line-height: 24px
+	font-weight: bold	
+	text-decoration: none
+	@media(max-width: $screen-sm)
+		display: none
+
+.nav__link	
+	position: relative
+	font-family: 'Open Sans', Arial, sans-serif
+	text-decoration: none
+	color: #fff	
+	border-bottom: 1px solid $border-color-light
+	
+	border: none
+	background-color: transparent
+	&--active
+		color: $second-color !important
+
+.nav__list 
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	width: 100%
+	margin: 0
+
+	font-family: Open Sans, Arial, sans-serif
+
+	color: $text-color-light
+	text-decoration: none
+	list-style: none
+
+	&--level-1
+		padding: 0 15px
+		justify-content: space-between
+		align-items: center
+		
+		line-height: 48px
+		>.nav__item
+			box-sizing: border-box
+
+			height: 100%
+			padding: 22px 20px 37px 21px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+			align-items: center
+			cursor: pointer
+			.nav__link
+				padding-bottom: 20px
+				max-height: 40px
+				font-size: 16px
+				@media(max-width: $screen-md)
+					font-size: 14px
+				@media(max-width: $screen-sm)
+					border-bottom: 1px solid #4b4e53
+					height: auto
+					padding: 0
+					border-bottom: 1px solid $border-color-light
+					&:hover
+						border-bottom: 1px solid transparent
+						color:  #0080cb
+
+			@media(max-width: $screen-sm)
+				padding: 0
+				.nav__link
+					margin: 15px 0 15px 25px
+					border-bottom: 1px solid transparent
+					
+			&:hover		
+				background-color: #21252c
+				box-shadow: 40px 1px 0  #21252c, -40px 1px 0  #21252c
+				transition-duration: 0.3s
+			@media(max-width: $screen-sm)
+				width: 100%
+				justify-content: flex-start
+				&:not(:last-of-type)
+					border-bottom: 1px solid $border-color
+				&:hover
+					background-color: #3a414f
+					box-shadow: none
+			@media(min-width: $screen-sm + 1) and (max-width: 1180px)
+				padding: 22px 7px 37px 7px
+			@media(min-width: 1180px + 1) 
+				padding: 22px 10px 37px 10px
+			@media(max-width: $screen-sm)
+				flex-flow: column
+				align-items: flex-start
+		>.nav__dropdown
+			.nav__link
+				border-bottom: 1px dashed $border-color
+				&:hover
+					border-bottom: 1px dashed #fff
+		
+
+		@media (min-width: $screen-sm + 1) and (max-width: 1180px)
+			min-width: 82%
+			font-size: 14px
+			line-height: 36px
+
+		@media(max-width: $screen-sm)
+			flex-flow: column
+			padding: 0
+			font-size: 16px
+			line-height: 25px
+			margin-bottom: 215px
+			transition: 0.5s all
+
+	&--level-2
+		max-width: 50%
+		max-height: 300px
+		padding-bottom: 75px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-flow: column
+		align-items: flex-start
+		justify-content: flex-start
+		flex-wrap: wrap		
+		margin: 0
+		background-color: inherit
+		>.nav__item
+			padding-top: 15px
+			padding-left: 25px
+			word-wrap: break-word
+			justify-content: flex-start
+			line-height: 24px
+			max-height: 40px
+
+			.nav__link
+				padding-bottom: 0
+				color: #b4b4b4
+				text-decoration: none
+				border-bottom: 1px solid #b4b4b4
+				line-height: 24px
+				margin: 0
+				&:hover
+					color: #fff
+					border-bottom: 1px solid #fff
+				&:active
+					color: $second-color
+					border-bottom: none
+			@media(max-width: $screen-sm)
+				flex: 1 0 100%
+				a
+					margin-left: 15px
+		@media(max-width: $screen-xl)
+			max-width: 70%
+		@media(max-width: $screen-lg)
+			max-width: 90%
+		@media(max-width: $screen-sm)
+			font-size: 14px
+			padding-bottom: 25px
+			max-height: none
+
+
+
+
+
+
+// .nav__dropdown--open 
+	
+// 	opacity: 1
+// 	z-index: -1
+// 	transition-duration: 1s
+// 	@media(max-width: $screen-sm)
+// 		transform: translateY(-130%)
+// 		opacity: 0
+
+// Open DROPDOWN!
+
+
+
+		
+
+// Стили селекта
+
+.menu__user .selectize-control.single .selectize-input 
+	-webkit-box-shadow: none
+	background-color: #2b303a
+	font-size: 16px
+	box-shadow: none
+	background-color: transparent
+	background-image: none
+	background-image: none
+	background-image: none
+	background-image: none
+	background-image: none
+	background-repeat: repeat-x
+
+.menu__user .selectize-control.single .selectize-input,
+.menu__user .selectize-dropdown.single 
+	border: none
+	color: $text-color-light
+
+.menu__user .selectize-dropdown .active 
+	background-color: #0080cb
+	color: $text-color-light
+
+.menu__user .selectize-dropdown 
+	position: absolute
+	font-size: 16px
+	z-index: 10
+	background: #2b303a
+	margin: -1px 0 0 0
+	border: none
+.menu__user .selectize-control.single .selectize-input:after 
+	content: ' '
+	display: block
+	position: absolute
+	top: 50%
+	right: 5px
+	margin-top: -3px
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: 5px 5px 0 5px
+	border-color: #fff transparent transparent transparent
+
+.full.has-items.has-options.items.selectize-input.dropdown-active
+	background-color: #21252c
+
+.submenu__mobile
+	display: none
+	list-style: none
+	width: 100%
+	padding: 0
+	&--open
+		display: block
+
+.mobile__item
+	border-bottom: 1px solid #4b4e53
+	padding: 10px
+
+
+.menu__phone--mobile
+	display: none
+	@media(max-width: $screen-sm)
+		z-index: 2
+		display: block
+		position: absolute
+		top: 25px
+		right: 120px
+	a
+		color: #fff
+		text-decoration: none
+
+.mobile__link
+	text-decoration: none
+	color: #b4b4b4
+	font-size: 16px
+	z-index: 12
+	margin-left: 5%
+	width: auto
+	border-bottom: 1px solid $border-color
+	&:hover,
+	&:active
+		border-bottom: none
+		color: $second-color
+
+.menu__burger
+	display: none
+	@media(max-width: $screen-sm)
+		display: block
+		position: absolute
+		width: 25px
+		height: 25px
+		top: 25px
+		right: 50px
+		
+.burger__icon
+	display: block
+	position: absolute
+	z-index: 3
+	top: 8px
+	right: 0
+	width: 100%
+	height: 3px
+	background: #fff
+	transition: all 1s
+	&:before
+		content: ''
+		position: absolute
+		top: -8px
+		left: 0
+		width: 100%
+		height: 3px
+		background: #fff
+		transition: all 0.4s
+	&:after
+		content: ''
+		position: absolute
+		top: 8px
+		left: 0
+		width: 100%
+		height: 3px
+		background: #fff
+		transition: all 0.4s
+
+.menu__burger--opened .burger__icon
+
+	display: block
+	position: absolute
+	top: 8px
+	right: 0
+	width: 100%
+	height: 3px
+	background: transparent
+	transition: all 0.4s
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		transform: rotate(-45deg)
+		width: 80%
+		height: 5px
+		background: #fff
+		transition: all 0.4s
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		transform: rotate(45deg)
+		width: 80%
+		height: 5px
+		background: #fff
+		transition: all 0.4s
+

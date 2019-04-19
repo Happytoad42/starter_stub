@@ -1,0 +1,53 @@
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	font-family: 'Open Sans', Arial, sans-serif
+	outline: none
+
+html
+	position: relative
+	scroll-behavior: smooth
+	height: 100%
+
+body
+	position: relative
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-flow: column
+	min-height: 100%
+
+	overflow-x: hidden
+
+	main
+		flex-grow: 1
+
+	footer
+		margin-top: auto
+
+.visuallyhidden 
+	transition: all 0.5s
+	position: absolute
+
+	width: 1px
+	height: 1px
+	margin: -1px
+	border: 0
+	padding: 0
+
+	clip: rect(0 0 0 0)
+	overflow: hidden
+
+.hidden
+	display: none !important
+
+.clearfix::after 
+	content: ""
+	display: block
+	height: 0
+	clear: both
+	visibility: hidden
+	
