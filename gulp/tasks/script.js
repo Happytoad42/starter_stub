@@ -15,7 +15,7 @@ module.exports = function() {
     // });
 
     $.gulp.task('scripts', function () {
-        return $.gulp.src(['src/static/js/*.js','src/vendor/**/*.js' ])
+        return $.gulp.src(['src/static/js/**/*.js','src/vendor/**/*.js' ])
             .pipe($.gp.plumber())
             .pipe($.gp.concat('main.js'))
             //.pipe($.gp.uglify())

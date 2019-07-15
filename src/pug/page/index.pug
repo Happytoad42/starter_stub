@@ -1,5 +1,100 @@
 extends ../layout/layout
 block content
-    main
+    main.main
+      section.hero
+        .hero__wrapper
+          .hero__text
+            .hero__icon
+              img(src='static/img/ic-logo.svg')
+            h1 Датчик спокойствия
+            p Комплекс из камеры  и мобильного приложения, который помогает  в любой момент убедиться, что с близкими и домом всё в порядке.
+      section.plates
+        .plates__wrapper
+          .plates__plate.plate
+            .plate__img
+              img(src='static/img/cam.png')
+            .plate__link
+              span Подробнее
+          .plates__plate.plate
+            .plate__img
+              img(src='static/img/cam.png')
+            .plate__link
+              span Подробнее
+      section.tiles
+        h2 Приобрести
+        .tiles__wrapper
+          .tiles__tile.tile
+            .tile__icons
+              .tile__icon
+                img(src='static/img/icons/content/cam.svg')
+            .tile__text
+              span Покупка
+          .tiles__tile.tile
+            .tile__icons
+              .tile__icon
+                img(src='static/img/icons/content/cam.svg')
+              .tile__icon
+                img(src='static/img/icons/content/cal.svg')
+            .tile__text
+              span Рассрочка
+          .tiles__tile.tile
+            .tile__icons
+              .tile__icon
+                img(src='static/img/icons/content/cam.svg')
+              .tile__icon
+                img(src='static/img/icons/content/cal.svg')
+              .tile__icon
+                img(src='static/img/icons/content/wifi.svg')
+            .tile__text
+              span Пакет
+              span "Все под контролем"
+          .tiles__tile.tile
+            .tile__icons
+              .tile__icon
+                img(src='static/img/icons/content/btv.svg')
+              .tile__icon
+                img(src='static/img/icons/content/cam.svg')
+              .tile__icon
+                img(src='static/img/icons/content/cal.svg')
+              .tile__icon
+                img(src='static/img/icons/content/wifi.svg')
+            .tile__text
+              span Пакет
+              span "Тысяча пятьсот"
 
+      section.form
+        form
+          span Оставьте заявку, и мы позвоним вам в ближайшее время
+          input(type='tel' name='phone' pattern='+7 [0-9]{3}-[0-9]{3}-[0-9]{4}' required)#phone
+          label(for='phone').visuallyhidden Номер телефона
+          button(type='submit' name='submit') Отправить заявку
+
+      section.slider
+        .slider__wrap
+          .slider__controls.controls
+            .controls__prev
+            .controls__next
+          .slider__line
+            .slider__slide.slide
+              .slide__text
+                span.slide__name Алексей Гоно
+                p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
+            .slider__slide.slide
+              .slide__text
+                span.slide__name Алексей Гоно
+                p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
+            .slider__slide.slide.slide--active
+              .slide__text
+                span.slide__name Алексей Гоно
+                p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
+            .slider__slide.slide
+              .slide__text
+                span.slide__name Алексей Гоно
+                p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
+            .slider__slide.slide
+              .slide__text
+                span.slide__name Алексей Гоно
+                p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
+
+          
 
