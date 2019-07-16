@@ -1,0 +1,87 @@
+.slider
+	position: relative
+	display: flex
+	flex-flow: column
+	justify-content: flex-start
+	align-items: center
+	width: 100%
+	margin: 25px 0 50px
+	h2
+		margin-bottom: 45px
+		font-size: $font-size_heading
+	&__wrap
+		position: relative
+		width: 560px
+		height: 240px
+
+	.controls
+		position: absolute
+		z-index: 99
+		height: 100%
+		width: auto
+		top: 0
+		left: 50%
+		div
+			position: absolute
+
+			height: 15px
+			width: 15px
+			border-width: 0 0 4px 4px
+			border-color: #fff
+			border-style: solid
+			cursor: pointer
+			&:hover
+				opacity: .7
+			&.disabled
+				opacity: 0
+				cursor: default
+		&__prev
+			top: 20px
+			transform: rotate(-225deg)
+		&__next
+			bottom: 20px
+			transform: rotate(-45deg)
+
+	.slide
+		position: absolute
+		display: flex
+		width: 560px
+		height: 240px
+		padding: 20px
+		background: $gradient-primary
+		border-radius: 18px
+		font-family: Roboto
+		color: #fff
+		opacity: 0
+		transition: all 0.7s ease-out
+		&__avatar
+			display: flex
+			align-items: flex-start
+			height: 100%
+		&__text
+			display: flex
+			flex-flow: column
+			justify-content: flex-start
+			align-items: flex-start
+			margin-left: 20px
+		&__name
+			margin: 45px 0 20px
+			font-size: 18px
+			font-weight: normal
+		&__message			
+			font-size: 20px
+			line-height: 1.2
+			font-weight: bold
+		&--active
+			opacity: 1
+			z-index: 9
+		&.prev,
+		&.next
+			opacity: .3
+
+
+		&.prev
+			transform: translate(0, -20%) scale(0.8)
+
+		&.next
+			transform: translate(0, 20%) scale(0.8)

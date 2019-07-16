@@ -29,7 +29,7 @@ block content
             .tile__text
               span Покупка
           .tiles__tile.tile
-            .tile__icons
+            .tile__icons.align-end
               .tile__icon
                 img(src='img/icons/content/cal.svg')
               .tile__icon
@@ -63,37 +63,52 @@ block content
 
       section.form
         form
-          span Оставьте заявку,<br> и мы позвоним вам в ближайшее время
-          input(type='tel' name='phone' pattern='+7 [0-9]{3}-[0-9]{3}-[0-9]{4}' required)#phone
+          span Оставьте заявку,и мы позвоним вам<br>  в ближайшее время
+          input(type='tel' name='phone' placeholder="+7 ___ ___ ____" pattern="\+7\s[\(]{0,1}9[0-9]{2}[\)]{0,1}\s\d{3}\s\d{2}\s}\d{2}" required)#phone
+          p.validity
+            span !
+            | Проверьте набранный номер
           label(for='phone').visuallyhidden Номер телефона
-          button(type='submit' name='submit') Отправить заявку
+          button(type='submit' name='submit') Отправить заявку <span class='send-icon'></span>
 
       section.slider
+        h2 Отзывы
         .slider__wrap
           .slider__controls.controls
-            .controls__prev
-            .controls__next
+            .controls__prev#back
+            .controls__next#forvard
           .slider__line
-            .slider__slide.slide
-              .slide__text
-                span.slide__name Алексей Гоно
-                p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
-            .slider__slide.slide
-              .slide__text
-                span.slide__name Алексей Гоно
-                p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
             .slider__slide.slide.slide--active
+              .slide__avatar
+                img(src="img/ic-avatar.png")
               .slide__text
                 span.slide__name Алексей Гоно
                 p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
             .slider__slide.slide
+              .slide__avatar
+                img(src="img/ic-avatar.png")
               .slide__text
                 span.slide__name Алексей Гоно
                 p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
             .slider__slide.slide
+              .slide__avatar
+                img(src="img/ic-avatar.png")
               .slide__text
                 span.slide__name Алексей Гоно
                 p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
+            .slider__slide.slide
+              .slide__avatar
+                img(src="img/ic-avatar.png")
+              .slide__text
+                span.slide__name Алексей Гоно
+                p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
+            .slider__slide.slide
+              .slide__avatar
+                img(src="img/ic-avatar.png")
+              .slide__text
+                span.slide__name Алексей Гоно
+                p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
+          
 
           
 

@@ -15,10 +15,12 @@
 		position: relative
 		display: flex
 		flex-flow: column
-		justify-content: center
+		justify-content: flex-end
 		align-items: center
 		width: 213px
 		height: 213px
+		padding-bottom: 20px
+		padding-top: 15px
 		background: $gradient-primary
 		border-radius: 18px
 		&:after 
@@ -32,26 +34,30 @@
 			box-shadow:  0px 25px 100px #48AE4B
 		&__icons
 			width: 100%
-			padding: 20px 25px
+			padding: 0 25px
+			margin-top: auto
 			display: flex
 			flex-wrap: wrap
 			justify-content: space-around
 			align-items: center
+			&.align-end
+				align-items: flex-end
 		&__icon
-			max-width: 30%
-			flex: 0 0 auto
+			flex: 0 0 30%
 			display: flex
-			align-items: center
+			align-items: flex-end
 			justify-content: center
-			img
-				width: 100%
-				height: auto
+
 
 			&--full
-				width: 100%
+				flex-basis: 100%
 				max-width: unset
+				margin: 5px 0
+				align-items: flex-end
+
 		&__text
 			display: flex
+			flex-basis: 30%
 			flex-flow: column
 			justify-content: center
 			align-items: center
@@ -59,6 +65,7 @@
 			color: #fff
 			font-size: $font-size
 			font-weight: bold
+
 			span
 				font-family: Roboto, sans-serif
 

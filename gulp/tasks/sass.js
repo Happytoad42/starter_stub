@@ -30,5 +30,11 @@ module.exports = function() {
             }));
     });
 
+    $.gulp.task('fonts', function () {
+        return $.gulp.src(['src/static/fonts/*'])
+            .pipe($.gp.plumber())                             // отлаливаю ошибки и не даю вылететь gulp
+            .pipe($.gulp.dest('dest/fonts'));
+    });
+
 };
 

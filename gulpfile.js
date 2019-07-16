@@ -18,11 +18,11 @@ $.path.tasks.forEach(function(taskPath){
 // таска при выове gulp, вызывает перечислиные таски паралельно(.parallel) либо поочередно(gulp.series)
 $.gulp.task('default', $.gulp.series(
     $.gulp.series('clean'),
-    $.gulp.series('pug', 'sass', 'scripts', 'img', 'copy', 'libs_css'),
+    $.gulp.series('pug', 'sass', 'scripts', 'img', 'copy', 'libs_css', 'fonts'),
     $.gulp.parallel('watch', 'serve')
     ));
     
 $.gulp.task('build', $.gulp.series(
     $.gulp.series('clean'),
-    $.gulp.series('pug', 'sass', 'scripts', 'img', 'copy', 'libs_css'),
+    $.gulp.series('pug', 'sass', 'scripts', 'img', 'copy', 'libs_css', 'fonts'),
 ));
