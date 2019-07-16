@@ -31,17 +31,17 @@ block content
           .tiles__tile.tile
             .tile__icons
               .tile__icon
-                img(src='img/icons/content/cam.svg')
-              .tile__icon
                 img(src='img/icons/content/cal.svg')
+              .tile__icon
+                img(src='img/icons/content/cam.svg')
             .tile__text
               span Рассрочка
           .tiles__tile.tile
             .tile__icons
               .tile__icon
-                img(src='img/icons/content/cam.svg')
+                img(src='img/icons/content/100.svg')
               .tile__icon
-                img(src='img/icons/content/cal.svg')
+                img(src='img/icons/content/cam.svg')
               .tile__icon
                 img(src='img/icons/content/wifi.svg')
             .tile__text
@@ -49,12 +49,12 @@ block content
               span "Все под контролем"
           .tiles__tile.tile
             .tile__icons
-              .tile__icon
+              .tile__icon.tile__icon--full
                 img(src='img/icons/content/btv.svg')
               .tile__icon
-                img(src='img/icons/content/cam.svg')
+                img(src='img/icons/content/100.svg')
               .tile__icon
-                img(src='img/icons/content/cal.svg')
+                img(src='img/icons/content/cam.svg')
               .tile__icon
                 img(src='img/icons/content/wifi.svg')
             .tile__text
@@ -63,7 +63,7 @@ block content
 
       section.form
         form
-          span Оставьте заявку, и мы позвоним вам в ближайшее время
+          span Оставьте заявку,<br> и мы позвоним вам в ближайшее время
           input(type='tel' name='phone' pattern='+7 [0-9]{3}-[0-9]{3}-[0-9]{4}' required)#phone
           label(for='phone').visuallyhidden Номер телефона
           button(type='submit' name='submit') Отправить заявку
