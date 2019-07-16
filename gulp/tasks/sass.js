@@ -30,12 +30,5 @@ module.exports = function() {
             }));
     });
 
-    $.gulp.task('fontSlick', function () {
-        return $.gulp.src([
-            'src/vendor/slick/fonts/*',
-            'src/static/fonts/*'])
-            .pipe($.gp.plumber())
-            .pipe($.gulp.dest('dest/webfonts'));
-    });
 };
 

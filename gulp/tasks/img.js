@@ -5,8 +5,7 @@
 module.exports = function() {
 
     $.gulp.task('img', function (done) {
-        return $.gulp.src(['src/static/img/**/*.{png,jpg,svg,gif,ico}',
-                           'src/vendor/slick/ajax-loader.gif'])
+        return $.gulp.src(['src/static/img/**/*.{png,jpg,svg,gif,ico}'])
             .pipe($.gp.plumber())
             // .pipe($.gp.imagemin())
             .pipe($.gulp.dest('dest/img/'))
