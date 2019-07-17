@@ -2,14 +2,14 @@
 	padding: 45px
 	form
 		position: relative
-		
 		display: flex
 		flex-flow: column
-		justify-content: center
+		justify-content: flex-end
 		align-items: center
 		padding: 15px
 		background-color: #fff
 		border-radius: 18px
+		height: 330px
 		&:after 
 			content: ''
 			position: absolute
@@ -19,20 +19,23 @@
 			width: 90%
 			height: 100%
 			box-shadow:  0px 25px 100px #48AE4B
-
+		.form__message
+			margin: 25px 0
+			margin-bottom: auto
 		input
 			display: block
 			width: 275px
 			background-color: #fff
 			border: 3px solid $color-ghost
 			border-radius: 4px
-			padding: 8px 25px
+			padding: 8px 20px
 			font-size: 27px
 			font-family: Roboto, sans-serif
 			font-weight: bold
 			&::placeholder
 				color: $color-text
 			&:focus
+				color: $color-text
 				border: 3px solid #47B247
 				box-shadow: 0px 24px 24px rgba(0, 152, 16, 0.25), 0px 0px 24px rgba(0, 152, 16, 0.25)
 		p
@@ -55,12 +58,14 @@
 					border-radius: 50%
 					z-index: -1
 
-		input:invalid
+		.input-invalid
 			border: 3px solid $color-error
-		input:invalid+p
+			box-shadow: none
+			color: $color-error
+		.input-invalid+p
 			opacity: 1	 
 
-		input:valid
+		.input-valid
 		 	border: 3px solid #47B247
 
 		button
@@ -119,6 +124,8 @@
 				transform: translate(0, -3px)
 				&:after
 					transform: translate(0, 9px) scale(0.9)
+			
+				
 
 
 
@@ -127,4 +134,20 @@
 			text-align: center
 			font-size: $font-size
 			font-weight: bold
+
+	.form__submitted
+		input, p
+			display: none
+		.form__message
+			font-size: 32px
+			line-height: 1.2
+			margin: 50px 0
+			margin-bottom: auto
+		button
+			pointer-events: none
+			&:before
+				background-color: $color-ghost
+			&:after
+				background-color: transparent
+
 
