@@ -76,6 +76,7 @@ const renderSlider = (element) => {
       prevSlide();
     })
     renderSlides();
+    renderBtns();
   }
 }
 

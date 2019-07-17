@@ -6,19 +6,19 @@ block content
           .hero__title
             .hero__icon
             h1 Датчик<br> спокойствия
-          p Комплекс из камеры  и мобильного приложения, который помогает  в любой момент убедиться, что с близкими и домом всё в порядке.
+          p Комплекс из камеры и&nbsp;мобильного приложения, который помогает в&nbsp;любой&nbsp;момент убедиться, что с близкими и домом всё в порядке.
       section.plates
         .plates__wrapper
           .plates__plate.plate
             .plate__img
               img(src='img/cam.png')
             .plate__link
-              span Подробнее
+              span.call-modal(data-modal='modal-1') Подробнее
           .plates__plate.plate
             .plate__img
-              img(src='img/cam.png')
+              img(src='img/smart.png')
             .plate__link
-              span Подробнее
+              span.call-modal(data-modal='modal-2') Подробнее
       section.tiles
         h2 Приобрести
         .tiles__wrapper
@@ -33,7 +33,7 @@ block content
               .tile__icon
                 img(src='img/icons/content/cal.svg')
               .tile__icon
-                img(src='img/icons/content/cam.svg')
+                img(src='img/icons/content/cam-sm.svg')
             .tile__text
               span Рассрочка
           .tiles__tile.tile
@@ -54,7 +54,7 @@ block content
               .tile__icon
                 img(src='img/icons/content/100.svg')
               .tile__icon
-                img(src='img/icons/content/cam.svg')
+                img(src='img/icons/content/cam-sm.svg')
               .tile__icon
                 img(src='img/icons/content/wifi.svg')
             .tile__text
@@ -108,6 +108,64 @@ block content
               .slide__text
                 span.slide__name Алексей Гоно
                 p.slide__message Отличное и удобное приложение. Классные возможности, отзывчивая поддержка.
+
+      .modal.modal-1
+        .modal__content.m-content
+          ul
+            li
+              .m-content__image
+                img(src='img/ic-wifi.png')
+              span Работает по Wi-Fi или кабелю
+            li
+
+              .m-content__image
+                img(src='img/ic-resolution.png')
+              span Разрешение 1280х960 (HD)
+            li
+              .m-content__image
+                img(src='img/ic-night.png')
+              span Ночная съемка
+            li
+              .m-content__image
+                img(src='img/ic-record.png')
+              span Запись звука и видео
+            li
+              .m-content__image
+                img(src='img/ic-angle.png')
+              span Угол обзора 100°
+            li
+              .m-content__image
+                img(src='img/ic-cable.png')
+              span Длина кабеля 1.5 метра
+          span.modal__close
+      .modal.modal-2
+        .modal__content
+          ul
+            li
+              .m-content__image
+                img(src='img/ic-move.png')
+              span Уведомление на телефон о движении
+            li
+              .m-content__image
+                img(src='img/ic-server.png')
+              span Хранение данных на защищенных серверах
+            li
+              .m-content__image
+                img(src='img/ic-access.png')
+              span Совместный доступ у членов семьи
+            li
+              .m-content__image
+                img(src='img/ic-archive.png')
+              span Скачивание/удаление архивных записей
+            li
+              .m-content__image
+                img(src='img/ic-geo.png')
+              span Доступ из любой точки мира
+            li
+              .m-content__image
+                img(src='img/ic-notifications.png')
+              span Уведомление о приходе «Домашних»
+          span.modal__close
           
 
           
